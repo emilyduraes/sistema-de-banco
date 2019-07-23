@@ -5,7 +5,11 @@ class Conta_bancaria():
         self.titular = titular
         self.cpf = cpf
         self.conta = conta
-        self.saldo = saldo    
+        self.saldo = saldo
+
+    def validar_usuário(self, titular, cpf):
+        titular = input('Qual seu nome?')
+        cpf = input('Qual seu CPF?')
 
 class Banco():
     def __init__(self):
@@ -42,24 +46,22 @@ class Opcoes():
     opcoes = input('Escolha uma ação e digite seu número: 1 - Consultar Saldo / 2 - Depositar / 3 - Sacar')
     
     if(opcoes == '1'): 
-        return self.banco.consultar_saldo()
+        print (self.banco.consultar_saldo())
 
     elif(opcoes ==  '2'):
-        return self.banco.depositar()
+        print (self.banco.depositar())
 
     elif(opcoes == '3'):
-        return self.banco.sacar()
+        print (self.banco.sacar())
 
     else:
-        return print('Digite apenas os valores numéricos citados.')
+        print('Digite apenas os valores numéricos citados.')
 
 
 class Sistema():
-    def __init__(self):
-        input('Qual seu nome?')
-        input('Qual seu CPF?')
-    
-    opcoes()
+    def __init__(self):  
+        validar_usuário()
+        opcoes()
     
 
 
