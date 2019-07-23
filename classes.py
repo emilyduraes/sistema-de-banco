@@ -16,15 +16,13 @@ class Banco():
             'Saldo' = saldo
         }
 
-    def criar_conta(self, titular, cpf):
+    def criar_conta(self, conta, saldo):
         conta = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
         saldo = 0
 
         for conta in Conta_bancaria():
             print(str(randint(0, len(conta)-1))+str(randint(0, len(conta)-1))+str(randint(0, len(conta)-1))+"-"+str(randint(0, len(conta)-1)))
             
-
-
     def depositar(self, saldo, valor):
         self.saldo += valor
     
@@ -38,6 +36,7 @@ class Sistema():
     def __init__(self):
         input('Qual seu nome?')
         input('Qual seu CPF?')
+
 
 
 #  conta:
