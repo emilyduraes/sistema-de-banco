@@ -9,38 +9,39 @@ class Conta_bancaria():
 
 class Banco():
     def __init__(self):
-        Conta_bancaria() = {
-            'Titular' = titular
-            'CPF' = cpf
-            'Número da Conta' = conta
-            'Saldo' = saldo
+        conta_bancaria = {
+            'Titular': titular,
+            'CPF': cpf,
+            'Número da Conta': conta,
+            'Saldo': saldo
         }
 
     def criar_conta(self, conta, saldo):
         conta = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
         saldo = 0
 
-        for conta in Conta_bancaria():
+        for conta in conta_bancaria:
             print(str(randint(0, len(conta)-1))+str(randint(0, len(conta)-1))+str(randint(0, len(conta)-1))+"-"+str(randint(0, len(conta)-1)))
             
     def depositar(self, saldo, valor):
-        input (('Digite o valor do depósito:')valor)
-            print('seu novo saldo é de R$' (self.saldo += valor))
+        input (('Digite o valor do depósito:') + valor)
+        print(f'Seu novo saldo é de R$ {self.saldo += valor}')
     
     def sacar(self, saldo, valor):
-        input(('Digite o valor do saque:')valor)
-            print('seu novo saldo é de R$'(self.saldo -= valor))
+        input(('Digite o valor do saque:') + valor)
+        print(f'Seu novo saldo é de R$ {self.saldo -= valor}')
 
     def consultar_saldo(self, saldo):
         print(f'Olá, {self.titular}. Seu saldo atual é {self.saldo}')
     
-class opcoes():
-    input('Escolha uma ação: 1- Consultar saldo 2- Depositar 3- Sacar')
-    if '1' 
+class Opcoes():
+    opcoes = input('Escolha uma ação: 1 - Consultar saldo 2 - Depositar 3 - Sacar')
+    
+    if(opcoes == '1'): 
         return consultar_saldo()
-    elif '2'
+    elif(opcoes ==  '2'):
         return depositar()
-    elif '3' 
+    elif(opcoes == '3'):
         return sacar()
     else:
         return print('Digite apenas valores citados')
@@ -50,6 +51,7 @@ class Sistema():
     def __init__(self):
         input('Qual seu nome?')
         input('Qual seu CPF?')
+    
     opcoes()
     
 
