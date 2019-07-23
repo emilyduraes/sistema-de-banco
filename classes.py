@@ -16,7 +16,7 @@ class Banco():
             'Saldo' = saldo
         }
 
-    def criar_conta(self, titular, cpf):
+    def criar_conta(self, conta, saldo):
         conta = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
         saldo = 0
 
@@ -26,18 +26,34 @@ class Banco():
 
 
     def depositar(self, saldo, valor):
-        self.saldo += valor
+        input (('Digite o valor do depósito:')valor)
+            print('seu novo saldo é de R$' (self.saldo += valor))
     
     def sacar(self, saldo, valor):
-        self.saldo -= valor
+        input(('Digite o valor do saque:')valor)
+            print('seu novo saldo é de R$'(self.saldo -= valor))
 
     def consultar_saldo(self, saldo):
         print(f'Olá, {self.titular}. Seu saldo atual é {self.saldo}')
     
+class opcoes():
+    input('Escolha uma ação: 1- Consultar saldo 2- Depositar 3- Sacar')
+    if '1' 
+        return consultar_saldo()
+    elif '2'
+        return depositar()
+    elif '3' 
+        return sacar()
+    else:
+        return print('Digite apenas valores citados')
+
+
 class Sistema():
     def __init__(self):
         input('Qual seu nome?')
         input('Qual seu CPF?')
+    opcoes()
+    
 
 
 #  conta:
@@ -56,6 +72,10 @@ class Sistema():
 
 # 2. O sistema cria uma conta automaticamente para o cliente
 #   "Olá João, sua conta é 1234-1" *fun aleatório *
+# if criar_conta = contaCadastrada
+# return contaCadastrada
+# else 
+# return criar_conta()
 
 # 3. Após a criação da conta, o sistema exibe um menu: input + (fun 1 2 3)
 #   "1- Consultar saldo"
