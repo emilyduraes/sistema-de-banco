@@ -1,5 +1,2 @@
-from classes import sistema()
+from classes import Conta_bancaria, Banco
 
-class Interface():
-    def __init__(self):
-       self.sistema = sistema()

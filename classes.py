@@ -1,22 +1,29 @@
 from random import randint
 
 class Conta_bancaria():
-    def __init__(self, titular, cpf, numero, saldo):
+    def __init__(self, titular, cpf, conta, saldo):
         self.titular = titular
         self.cpf = cpf
-        self.numero = numero
+        self.conta = conta
         self.saldo = saldo    
 
 class Banco():
     def __init__(self):
-        Conta_bancaria = []
+        Conta_bancaria() = {
+            'Titular' = titular
+            'CPF' = cpf
+            'Número da Conta' = conta
+            'Saldo' = saldo
+        }
 
     def criar_conta(self, titular, cpf):
-        self.conta = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        conta = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
         saldo = 0
 
-        for conta in Conta_bancaria:
-           self.conta = print(randint(0, len(self.conta)-1)) *4
+        for conta in Conta_bancaria():
+            print(str(randint(0, len(conta)-1))+str(randint(0, len(conta)-1))+str(randint(0, len(conta)-1))+"-"+str(randint(0, len(conta)-1)))
+            
+
 
     def depositar(self, saldo, valor):
         self.saldo += valor
@@ -27,7 +34,10 @@ class Banco():
     def consultar_saldo(self, saldo):
         print(f'Olá, {self.titular}. Seu saldo atual é {self.saldo}')
     
-
+class Sistema():
+    def __init__(self):
+        input('Qual seu nome?')
+        input('Qual seu CPF?')
 
 
 #  conta:
