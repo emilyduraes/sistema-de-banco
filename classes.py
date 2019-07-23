@@ -9,21 +9,20 @@ class Conta_bancaria():
 
 class Banco():
     def __init__(self):
-        self.contas = []
-
-            for conta in contas:
-
-    def depositar(self, valor):
-        self.saldo += valor
-    
-    def sacar(self, valor):
-        self.saldo -= valor
+        Conta_bancaria = []
 
     def criar_conta(self, titular, cpf):
-        
-        for conta in Contas:
-           self.conta = randint(0, len(self.cartas)-1)
-           saldo = 0
+        self.conta = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        saldo = 0
+
+        for conta in Conta_bancaria:
+           self.conta = print(randint(0, len(self.conta)-1)) *4
+
+    def depositar(self, saldo, valor):
+        self.saldo += valor
+    
+    def sacar(self, saldo, valor):
+        self.saldo -= valor
 
     def consultar_saldo(self, saldo):
         print(f'Olá, {self.titular}. Seu saldo atual é {self.saldo}')
