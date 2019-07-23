@@ -24,27 +24,34 @@ class Banco():
             print(str(randint(0, len(conta)-1))+str(randint(0, len(conta)-1))+str(randint(0, len(conta)-1))+"-"+str(randint(0, len(conta)-1)))
             
     def depositar(self, saldo, valor):
-        input (('Digite o valor do depósito:') + valor)
-        print(f'Seu novo saldo é de R$ {self.saldo += valor}')
+        valor = input ('Digite o valor do depósito:')
+        self.saldo += valor
+        print(f'Seu novo saldo é de R$ {self.saldo}.')
     
     def sacar(self, saldo, valor):
-        input(('Digite o valor do saque:') + valor)
-        print(f'Seu novo saldo é de R$ {self.saldo -= valor}')
+        valor = input('Digite o valor do saque:')
+        self.saldo -= valor
+        print(f'Seu novo saldo é de R$ {self.saldo}.')
 
     def consultar_saldo(self, saldo):
-        print(f'Olá, {self.titular}. Seu saldo atual é {self.saldo}')
+        print(f'Olá, {self.titular}. Seu saldo atual é {self.saldo}.')
     
 class Opcoes():
-    opcoes = input('Escolha uma ação: 1 - Consultar saldo 2 - Depositar 3 - Sacar')
+    self.banco = Banco()
+
+    opcoes = input('Escolha uma ação e digite seu número: 1 - Consultar Saldo / 2 - Depositar / 3 - Sacar')
     
     if(opcoes == '1'): 
-        return consultar_saldo()
+        return self.banco.consultar_saldo()
+
     elif(opcoes ==  '2'):
-        return depositar()
+        return self.banco.depositar()
+
     elif(opcoes == '3'):
-        return sacar()
+        return self.banco.sacar()
+
     else:
-        return print('Digite apenas valores citados')
+        return print('Digite apenas os valores numéricos citados.')
 
 
 class Sistema():
